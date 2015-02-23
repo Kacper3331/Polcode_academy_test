@@ -6579,3 +6579,27 @@ Processing by UsersController#index as HTML
   Rendered layouts/_navigation.html.erb (1.8ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 159ms (Views: 156.0ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Warsaw"], ["short_name", "Waw"], ["created_at", "2015-02-23 16:09:39.298305"], ["updated_at", "2015-02-23 16:09:39.298305"]]
+  [1m[36m (143.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mCity Load (0.6ms)[0m  [1mSELECT  "cities".* FROM "cities"  ORDER BY "cities"."id" DESC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cities" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Warsaw"], ["short_name", "Waw"], ["created_at", "2015-02-23 16:12:33.392072"], ["updated_at", "2015-02-23 16:12:33.392072"]]
+  [1m[36m (106.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cities" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Krakow"], ["short_name", "Kr"], ["created_at", "2015-02-23 16:12:33.501763"], ["updated_at", "2015-02-23 16:12:33.501763"]]
+  [1m[35m (78.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "cities" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Lodz"], ["short_name", "Ld"], ["created_at", "2015-02-23 16:12:33.584983"], ["updated_at", "2015-02-23 16:12:33.584983"]]
+  [1m[36m (78.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cities" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Katowice"], ["short_name", "Kat"], ["created_at", "2015-02-23 16:12:33.668335"], ["updated_at", "2015-02-23 16:12:33.668335"]]
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cities" ("name", "short_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Bialystok"], ["short_name", "Bial"], ["created_at", "2015-02-23 16:12:33.767786"], ["updated_at", "2015-02-23 16:12:33.767786"]]
+  [1m[36m (96.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mCity Load (0.6ms)[0m  SELECT  "cities".* FROM "cities"  ORDER BY "cities"."id" DESC LIMIT 1
